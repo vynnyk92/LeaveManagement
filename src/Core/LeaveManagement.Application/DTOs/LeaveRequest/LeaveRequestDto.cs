@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using LeaveManagement.Domain.Common;
+using LeaveManagement.Domain;
 
-namespace LeaveManagement.Domain
+namespace LeaveManagement.Application.DTOs.LeaveRequest
 {
-    public class LeaveRequest : BaseDomainEntity
+    public class LeaveRequestDto : BaseDto
     {
         public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }
 
-        public LeaveType LeaveType { get; set; }
+        public LeaveTypeDto LeaveType { get; set; }
 
         public int LeaveTypeId { get; set; }
 

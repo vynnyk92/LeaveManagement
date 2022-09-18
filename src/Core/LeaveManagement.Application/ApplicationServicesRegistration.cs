@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+﻿using System.Reflection;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace LeaveManagement.Application
 {
     public  static class ApplicationServicesRegistration
     {
-        public static void ConfigureApplicationServices(this IServiceCollection serviceCollection)
+        public static IServiceCollection ConfigureApplicationServices(this IServiceCollection serviceCollection)
         {
-            serviceCollection
-                .AddAutoMapper(Assembly.GetExecutingAssembly());
+            return serviceCollection
+                        .AddAutoMapper(Assembly.GetExecutingAssembly())
+                        .AddMediatR(Assembly.GetExecutingAssembly());
         }
     }
 }

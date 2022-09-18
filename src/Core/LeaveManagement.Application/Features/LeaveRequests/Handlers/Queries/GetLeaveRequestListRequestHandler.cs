@@ -3,12 +3,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using LeaveManagement.Application.Contracts;
-using LeaveManagement.Application.DTOs;
 using LeaveManagement.Application.DTOs.LeaveRequest;
 using LeaveManagement.Application.Features.LeaveTypes.Requests;
 using MediatR;
 
-namespace LeaveManagement.Application.Features.LeaveTypes.Handlers.Queries
+namespace LeaveManagement.Application.Features.LeaveRequests.Handlers.Queries
 {
     public class GetLeaveRequestListRequestHandler : IRequestHandler<GetLeaveRequestListRequest, IReadOnlyCollection<LeaveRequestListDto>>
     {

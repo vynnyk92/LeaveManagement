@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using LeaveManagement.Application.DTOs;
+﻿using System.Collections.Generic;
 using LeaveManagement.Application.DTOs.LeaveRequest;
 using MediatR;
 
-namespace LeaveManagement.Application.Features.LeaveTypes.Requests
+namespace LeaveManagement.Application.Features.LeaveRequests.Requests
 {
     public class GetLeaveRequestListRequest : IRequest<IReadOnlyCollection<LeaveRequestListDto>>
     {

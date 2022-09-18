@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using LeaveManagement.Application.Contracts;
 using LeaveManagement.Application.DTOs;
-using LeaveManagement.Application.Features.LeaveTypes.Requests;
+using LeaveManagement.Application.Features.LeaveAllocations.Requests;
 using MediatR;
 
-namespace LeaveManagement.Application.Features.LeaveTypes.Handlers.Queries
+namespace LeaveManagement.Application.Features.LeaveAllocations.Handlers.Queries
 {
     public class GetLeaveAllocationDetailsRequestHandler : IRequestHandler<GetLeaveAllocationDetailsRequest, LeaveAllocationDto>
     {

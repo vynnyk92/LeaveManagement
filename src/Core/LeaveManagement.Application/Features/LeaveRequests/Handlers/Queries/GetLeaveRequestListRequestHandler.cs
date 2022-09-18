@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using LeaveManagement.Application.Contracts;
 using LeaveManagement.Application.DTOs.LeaveRequest;
+using LeaveManagement.Application.Features.LeaveRequests.Requests;
 using LeaveManagement.Application.Features.LeaveTypes.Requests;
 using MediatR;
 

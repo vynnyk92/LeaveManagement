@@ -3,7 +3,7 @@ using LeaveManagement.Domain;
 
 namespace LeaveManagement.Application.DTOs.LeaveRequest
 {
-    public class CreateLeaveRequestDto
+    public class UpdateLeaveRequestDto : BaseDto
     {
         public DateTime StartDate { get; set; }
 
@@ -14,5 +14,7 @@ namespace LeaveManagement.Application.DTOs.LeaveRequest
         public DateTime DateRequested { get; set; }
 
         public string RequestComments { get; set; }
+
+        public bool Cancelled { get; set; }
     }
 }

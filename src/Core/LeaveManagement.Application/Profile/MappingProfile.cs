@@ -18,6 +18,10 @@ namespace LeaveManagement.Application.Profile
 
             CreateMap<LeaveType, LeaveTypeDto>()
                 .ReverseMap();
+
+            CreateMap<CreateLeaveRequestDto, LeaveRequest>();
+            CreateMap<CreateLeaveAllocationDto, LeaveAllocation>();
+            CreateMap<CreateLeaveTypeDto, LeaveType>();
         }
     }
 }

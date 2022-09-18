@@ -22,6 +22,7 @@ namespace LeaveManagement.Application.Profile
             CreateMap<CreateLeaveRequestDto, LeaveRequest>();
             CreateMap<CreateLeaveAllocationDto, LeaveAllocation>();
             CreateMap<CreateLeaveTypeDto, LeaveType>();
+            CreateMap<UpdateLeaveAllocationDto, LeaveAllocation>();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace LeaveManagement.Application.DTOs.Validators
         public CreateLeaveRequestDtoValidator(ILeaveTypeRepository leaveTypeRepository)
         {
             _leaveTypeRepository = leaveTypeRepository;
+            Include(new DtoWithLeaveTypeDtoValidator(_leaveTypeRepository));
             RuleFor(r => r.StartDate)
                 .NotEmpty()
                 .NotNull()
@@ -24,13 +25,6 @@ namespace LeaveManagement.Application.DTOs.Validators
 
             RuleFor(r => r.RequestComments)
                 .MaximumLength(200);
-
-            RuleFor(p => p.LeaveTypeId)
-                .MustAsync(async (id, token) =>
-                {
-                    var leaveType = await _leaveTypeRepository.Get(id);
-                    return leaveType!= null;
-                }).WithMessage("Wrong leaveType {PropertyName}");
         }
     }
 }

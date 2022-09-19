@@ -1,6 +1,8 @@
-﻿namespace LeaveManagement.Application.DTOs
+﻿using LeaveManagement.Application.DTOs.Abstractions;
+
+namespace LeaveManagement.Application.DTOs
 {
-    public class LeaveAllocationDto : BaseDto
+    public class LeaveAllocationDto : BaseDto, IDtoWithLeaveTypeDto
     {
         public int NumberOfDays { get; set; }
 

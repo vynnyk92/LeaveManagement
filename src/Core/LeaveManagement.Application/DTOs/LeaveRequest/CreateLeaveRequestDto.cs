@@ -1,9 +1,10 @@
 ﻿using System;
+using LeaveManagement.Application.DTOs.Abstractions;
 using LeaveManagement.Domain;
 
 namespace LeaveManagement.Application.DTOs.LeaveRequest
 {
-    public class CreateLeaveRequestDto
+    public class CreateLeaveRequestDto : IDtoWithLeaveTypeDto
     {
         public DateTime StartDate { get; set; }
 

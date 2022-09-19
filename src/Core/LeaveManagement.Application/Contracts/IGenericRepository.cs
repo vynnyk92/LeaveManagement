@@ -7,7 +7,7 @@ namespace LeaveManagement.Application.Contracts
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<T> Get(int id);
+        Task<T?> Get(int id);
 
         Task<IReadOnlyCollection<T>> GetAll();
 

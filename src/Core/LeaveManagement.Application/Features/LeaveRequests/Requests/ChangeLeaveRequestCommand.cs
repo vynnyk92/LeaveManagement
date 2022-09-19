@@ -6,6 +6,6 @@ namespace LeaveManagement.Application.Features.LeaveRequests.Requests
 {
     public class ChangeLeaveRequestCommand : IRequest<Unit>
     {
-        public CreateLeaveRequestDto LeaveRequest { get; set; }
+        public ChangeLeaveRequestApprovalDto LeaveRequest { get; set; }
     }
 }
